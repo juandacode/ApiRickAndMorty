@@ -1,0 +1,42 @@
+<section class="table">
+  <div class="table-container">
+    <table class="table-grid">
+      <tr class="header-table">
+        <th>Nombre</th>
+        <th>Vivo</th>
+        <th>Especie</th>
+        <th>Género</th>
+        <th>Origen</th>
+        <th>Locación</th>
+        <th>Capitulos</th>
+        <th>Fecha</th>
+        <th>Acciones</th>
+      </tr>
+      <!-- <tr *ngFor="let character of characters">
+        <td>{{ character.name }}</td>
+        <td>{{ character.isAlive }}</td>
+        <td>{{ character.species }}</td>
+        </tr> -->
+       <tr *ngFor="let character of characters" class="row-table">
+        <td>{{ character.name }} </td>
+        <td *ngIf="character.status == 'Alive'">
+          <img #isAlived [src]="imageStatusLived" alt="">
+        </td>
+        <td *ngIf="character.status == 'Dead'">
+          <img #isAlived [src]="imageStatusDead" alt="">
+        </td>
+        <td *ngIf="character.status == 'unknown'">
+          <img #isAlived [src]="imageUnknown" alt="">
+        </td>
+        <td>{{ character.species }}</td>
+        <td>{{ character.gender }}</td>
+        <td>{{ character.origin.name }}</td>
+        <td>{{ character.location.name }}</td>
+        <td>{{ character.episode.length }}</td>
+        <td>{{ character.created | date: 'dd/MM/yyyy' }}</td>
+        <!-- <td><img [src]="imagePaisage" alt=""><button (click)="openDialog()" type="button">Acciones</button></td> -->
+        <td><img class="image-character" [src]="character.image" alt=""></td>
+       </tr>
+    </table>
+  </div>
+</section>

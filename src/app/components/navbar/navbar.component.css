@@ -1,0 +1,24 @@
+.navbar-container{
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3.2rem;
+  height: 8vh;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 4rem;
+}
+.icon-home:hover {
+  cursor: pointer;
+}
+.icon-bell:hover {
+  cursor: pointer;
+}
+.logo:hover {
+  cursor: pointer;
+}

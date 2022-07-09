@@ -1,0 +1,71 @@
+
+.search-caracters-container {
+  display: flex;
+  margin: 2.4rem 3.2rem;
+  width: 90%;
+}
+.total-characters {
+  display: flex;
+  justify-content: space-around;
+  place-items: center;
+  border: 0.1rem solid var(--gray-color);
+  border-radius: 0.5rem;
+  padding: 0 1.5rem;
+  height: 2rem;
+}
+.title-total-characters {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+.status-characters > h2 {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+.span-total {
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: var(--gray-color);
+}
+.status-characters {
+  display: flex;
+  border: 0.1rem solid var(--gray-color);
+  border-radius: 0.5rem;
+  justify-content: space-around;
+  place-items: center;
+  width: 35rem;
+  height: 2rem;
+}
+
+.input-search-characters {
+  background-color: rgb(225, 223, 223);
+  border-radius: 1rem;
+  border: none;
+  padding: 0.5rem 0.5rem;
+
+  color: var(--gray-color);
+}
+.input-search-characters::placeholder {
+  margin: 0 0.5rem;
+  color: var(--gray-color);
+  text-align: center;
+  background-image: url('../../../assets/Icono de busqueda.png');
+  background-repeat: no-repeat;
+  background-position: 1.8rem center;
+}
+.input-search-characters:focus {
+  outline: none;
+
+}
+.search-caracters-container > div {
+  margin-right: 1.6rem;
+}
+
+.span-status {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+.pipe-separate {
+  font-weight: bold;
+  background-color: var(--gray-color);
+  height: 1.5rem;
+}

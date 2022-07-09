@@ -1,0 +1,14 @@
+.title-characters-container{
+  display: flex;
+  margin: 2.4rem 3.2rem;
+}
+
+.title{
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.img-movie {
+  margin-right: 1rem;
+  width: 2.6rem;
+  height: 2.6rem;
+}
