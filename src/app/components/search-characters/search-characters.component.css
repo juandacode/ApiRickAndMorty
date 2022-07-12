@@ -40,17 +40,18 @@
   background-color: rgb(225, 223, 223);
   border-radius: 1rem;
   border: none;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 1rem;
 
   color: var(--gray-color);
 }
 .input-search-characters::placeholder {
   margin: 0 0.5rem;
   color: var(--gray-color);
+  font-size: 1.0rem;
   text-align: center;
   background-image: url('../../../assets/Icono de busqueda.png');
   background-repeat: no-repeat;
-  background-position: 1.8rem center;
+  background-position: 0.5rem center;
 }
 .input-search-characters:focus {
   outline: none;

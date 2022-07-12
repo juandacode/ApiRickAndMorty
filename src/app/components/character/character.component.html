@@ -1,1 +1,25 @@
-<p>character works!</p>
+<tr *ngFor="let character of characters" class="row-tables">
+  <td>{{ character.name }} </td>
+  <ng-container [ngSwitch]="character.status">
+    <td *ngSwitchCase="character.status == 'Alive'">
+      <img #isAlived [src]="imageStatusLived" alt="">
+    </td>
+    <td *ngSwitchCase="character.status == 'Dead'">
+      <img [src]="imageStatusDead" alt="">
+  </td>
+    <ng-template *ngSwitchDefault="character.status == 'unknown'">
+      <img [src]="imageUnknown" alt="">
+    </ng-template>
+  </ng-container>
+  <td>{{ character.species }}</td>
+  <td>{{ character.gender }}</td>
+  <td>{{ character.origin.name }}</td>
+  <td>{{ character.location.name }}</td>
+  <td>{{ character.episode.length }}</td>
+  <td>{{ character.created | date: 'dd/MM/yyyy' }}</td>
+  <td><!-- <img [src]="imagePaisage" alt=""> --><!-- <button (click)="openModalWithId(character.id)" type="button">Acciones</button> --> <app-pop-up [nameModal]="character.name" [imageModal]="character.image" ></app-pop-up></td>
+  <!-- <div *ngIf="modalSwitch == true" class="div">
+    <app-pop-up></app-pop-up>
+  </div> -->
+  <!-- <td><img class="image-character" [src]="character.image" alt=""></td> -->
+ </tr>

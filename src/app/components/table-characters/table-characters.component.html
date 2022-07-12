@@ -1,5 +1,5 @@
 <section class="table">
-  <div class="table-container">
+  <div class="table-containers">
     <table class="table-grid">
       <tr class="header-table">
         <th>Nombre</th>
@@ -17,25 +17,30 @@
         <td>{{ character.isAlive }}</td>
         <td>{{ character.species }}</td>
         </tr> -->
-       <tr *ngFor="let character of characters" class="row-table">
+       <tr *ngFor="let character of characters" class="row-tables">
         <td>{{ character.name }} </td>
-        <td *ngIf="character.status == 'Alive'">
-          <img #isAlived [src]="imageStatusLived" alt="">
-        </td>
-        <td *ngIf="character.status == 'Dead'">
-          <img #isAlived [src]="imageStatusDead" alt="">
-        </td>
-        <td *ngIf="character.status == 'unknown'">
-          <img #isAlived [src]="imageUnknown" alt="">
-        </td>
+        <ng-container [ngSwitch]="character.status">
+          <td *ngSwitchCase="character.status == 'Alive'">
+            <img #isAlived [src]="imageStatusLived" alt="">
+          </td>
+          <td *ngSwitchCase="character.status == 'Dead'">
+            <img #isAlived [src]="imageStatusDead" alt="">
+          </td>
+          <td *ngSwitchDefault="character.status == 'unknown'">
+            <img #isAlived [src]="imageUnknown" alt="">
+          </td>
+        </ng-container>
         <td>{{ character.species }}</td>
         <td>{{ character.gender }}</td>
         <td>{{ character.origin.name }}</td>
         <td>{{ character.location.name }}</td>
         <td>{{ character.episode.length }}</td>
         <td>{{ character.created | date: 'dd/MM/yyyy' }}</td>
-        <!-- <td><img [src]="imagePaisage" alt=""><button (click)="openDialog()" type="button">Acciones</button></td> -->
-        <td><img class="image-character" [src]="character.image" alt=""></td>
+        <td><!-- <img [src]="imagePaisage" alt=""> --><!-- <button (click)="openModalWithId(character.id)" type="button">Acciones</button> --> <app-pop-up [nameModal]="character.name" [imageModal]="character.image" ></app-pop-up></td>
+        <!-- <div *ngIf="modalSwitch == true" class="div">
+          <app-pop-up></app-pop-up>
+        </div> -->
+        <!-- <td><img class="image-character" [src]="character.image" alt=""></td> -->
        </tr>
     </table>
   </div>

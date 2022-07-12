@@ -17,6 +17,7 @@ export class TableCharactersComponent implements OnInit {
   charactersDead: number = 0;
   totalCharacters: number = 0;
   allEpisodes: string[] = [];
+  modalSwitch: boolean = false;
 
   constructor(private dialogRef: MatDialog) { }
 
@@ -45,5 +46,11 @@ export class TableCharactersComponent implements OnInit {
   }
   getCharactersTotal() {
     return this.totalCharacters =  this.characters.length;
+  }
+  openModalWithId(id: number) {
+    this.modalSwitch = true;
+  }
+  closeModal() {
+    this.modalSwitch = false;
   }
 }
