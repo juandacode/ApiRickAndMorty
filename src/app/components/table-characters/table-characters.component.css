@@ -24,19 +24,7 @@
   font-size: 1.2rem;
   font-weight: 300;
 }
-.row-tables {
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  align-items: center;
 
-  color: var(--main-color);
-  padding: 1.2rem 0;
-}
-.row-tables > td {
-  font-size: 1.0rem;
-  font-weight: 300;
-  justify-self: center;
-}
 .image-character {
   width: 3rem;
   height: 3rem;

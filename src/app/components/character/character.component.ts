@@ -15,6 +15,26 @@ export class CharacterComponent implements OnInit {
   totalCharacters: number = 0;
   allEpisodes: string[] = [];
   modalSwitch: boolean = false;
+
+  @Input() character: Character = {
+    id: 0,
+    name: '',
+    status: '',
+    species: '',
+    gender: '',
+    origin: {
+      name: '',
+      url: '',
+    },
+    location: {
+      name: '',
+      url: '',
+    },
+    episode: [],
+    created: '',
+    image: '',
+  } ;
+
   @Input() imageModal: string = '';
   @Input() nameModal: string = '';
   constructor() { }
