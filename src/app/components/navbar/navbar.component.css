@@ -12,14 +12,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 4rem;
+  width: 5rem;
 }
-.icon-home:hover {
+.navbar-icons > img:first-child {
+  width: 1.4rem;
+  height: 1.4rem;
+  object-fit: cover;
+}
+.navbar-icons > img:hover {
   cursor: pointer;
 }
-.icon-bell:hover {
-  cursor: pointer;
-}
+
 .logo:hover {
   cursor: pointer;
 }

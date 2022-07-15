@@ -2,13 +2,16 @@
   <td>{{ character.name }} </td>
   <!-- Pendiente por implementar NgSwitch -->
   <ng-container [ngSwitch]="character.status">
-    <td *ngIf="character.status == 'Alive'">
-      <img #isAlived [src]="imageStatusLived" alt="">
+    <td *ngSwitchCase="'Alive'">
+    <img #isAlived [src]="imageStatusLived" alt="">
     </td>
-    <td *ngIf="character.status == 'Dead'">
+    <td *ngSwitchCase="'Dead'">
       <img [src]="imageStatusDead" alt="">
   </td>
-    <td *ngIf="character.status == 'unknown'">
+    <td *ngSwitchCase="'unknown'">
+      <img [src]="imageUnknown" alt="">
+    </td>
+    <td *ngSwitchDefault>
       <img [src]="imageUnknown" alt="">
     </td>
   </ng-container>

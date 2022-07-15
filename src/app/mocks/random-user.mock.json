@@ -1,0 +1,66 @@
+{
+  "results": [
+    {
+      "gender": "female",
+      "name": {
+        "title": "Mrs",
+        "first": "Célia",
+        "last": "Sanchez"
+      },
+      "location": {
+        "street": {
+          "number": 9456,
+          "name": "Rue des Ecrivains"
+        },
+        "city": "Tours",
+        "state": "Yvelines",
+        "country": "France",
+        "postcode": 38379,
+        "coordinates": {
+          "latitude": "-14.5158",
+          "longitude": "172.5863"
+        },
+        "timezone": {
+          "offset": "+6:00",
+          "description": "Almaty, Dhaka, Colombo"
+        }
+      },
+      "email": "celia.sanchez@example.com",
+      "login": {
+        "uuid": "3f7cfbff-599a-4dad-bbae-219ef8d5d5d2",
+        "username": "whitedog166",
+        "password": "notredam",
+        "salt": "JLQ3O10S",
+        "md5": "a8fefe553616010fe6748dc46a45e29d",
+        "sha1": "9830b6141fc404e523ca737b48dee43a31137150",
+        "sha256": "b9a06b6be315f0909fe13cb8325451fbc872a51d78687b29c938051c292a4f16"
+      },
+      "dob": {
+        "date": "1979-03-24T14:53:57.677Z",
+        "age": 43
+      },
+      "registered": {
+        "date": "2020-07-27T05:55:29.779Z",
+        "age": 1
+      },
+      "phone": "03-83-83-81-51",
+      "cell": "06-62-26-79-36",
+      "id": {
+        "name": "INSEE",
+        "value": "2790255589504 70"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/94.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/94.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/94.jpg"
+      },
+      "nat": "FR"
+    }
+  ],
+  "info": {
+    "seed": "fc75f330029ba305",
+    "results": 1,
+    "page": 1,
+    "version": "1.4"
+  }
+}

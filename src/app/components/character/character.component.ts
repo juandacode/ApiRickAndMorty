@@ -33,7 +33,7 @@ export class CharacterComponent implements OnInit {
     episode: [],
     created: '',
     image: '',
-  } ;
+  };
 
   @Input() imageModal: string = '';
   @Input() nameModal: string = '';

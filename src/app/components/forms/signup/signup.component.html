@@ -1,0 +1,28 @@
+<form [formGroup]="formSignUp" (submit)="sendFormToConsole()">
+  <!-- Previsualizacion de los valores del formulario -->
+  <h2>Datos en vivo del formulario:</h2>
+  <!-- Se usa un Pipe de Angular para convertir objeto de la data en un Json y mostrarlo -->
+  <p> {{ formSignUp.value | json }}  </p>
+  <!-- Campos del formulario -->
+  <mat-form-field appearance="standard">
+    <input matInput placeholder="Nombre" controlName="name">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+  <mat-form-field appearance="standard">
+    <input matInput placeholder="Apellidos" controlName="lastName">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+  <mat-form-field appearance="standard">
+    <input matInput placeholder="Email" controlName="email">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+  <mat-form-field appearance="standard">
+    <input matInput placeholder="Teléfono" controlName="phone">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+  <mat-form-field appearance="standard">
+    <input matInput placeholder="Diección" controlName="address">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+  <button [disabled]="!formSignUp.valid" type="submit">Enviar</button>
+</form>

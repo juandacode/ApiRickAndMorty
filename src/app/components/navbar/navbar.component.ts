@@ -9,7 +9,7 @@ export class NavbarComponent implements OnInit {
   logoRickAndMorty = '../../assets/Logo-RandM.png';
   iconHome: string = '../../assets/Home.png';
   iconBell: string = '../../assets/Icono de campana.png';
-
+  iconHeart: string = '../../assets/heart.svg';
   constructor() { }
 
   ngOnInit(): void {

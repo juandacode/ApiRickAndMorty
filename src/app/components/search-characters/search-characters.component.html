@@ -1,17 +1,19 @@
 <section class="search-caracters">
   <div class="search-caracters-container">
     <div class="total-characters">
-      <h2 class="title-total-characters">Total de personajes <span class="span-total">20</span> <!-- {{totalCharacters}} --></h2>
+      <h2 class="title-total-characters">Total de personajes <span class="span-total">{{ allCharacters }} </span> <!-- {{totalCharacters}} --></h2>
     </div>
     <div  class="status-characters">
       <img [ngStyle]="iconStyle" [src]="imageStatusLived" alt="">
-      <h2 class="title-status-characters">{{ textCharactersLived | titlecase }} <span class="span-status">8</span> <!-- {{totalCharacters}} --></h2>
+      <h2 class="title-status-characters">{{ textCharactersLived | titlecase }} <span class="span-status">{{ charactersLived }} </span> <!-- {{totalCharacters}} --></h2>
       <span class="pipe-separate"> | </span>
       <img [ngStyle]="iconStyle" [src]="imageStatusDead" alt="">
-      <h2 class="title-status-characters">{{ textCharactersDead | titlecase }} <span class="span-status">6</span> <!-- {{totalCharacters}} --></h2>
+      <h2 class="title-status-characters">{{ textCharactersDead | titlecase }} <span class="span-status">{{ charactersDead}} </span></h2>
     </div>
     <div class="search-characters-input">
-      <input type="text" placeholder="Buscar" class="input-search-characters">
+      <input [(ngModel)]="inputSearch" type="text" placeholder="Buscar" class="input-search-characters">
+      <button (click)="onSearch()" type="button">Mandar Datos de Búsqueda al Padre</button>
+      {{ inputSearch }}
     </div>
   </div>
 </section>

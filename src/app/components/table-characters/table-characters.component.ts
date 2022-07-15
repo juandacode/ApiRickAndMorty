@@ -1,7 +1,6 @@
 import { Character } from './../../models/interfaces/Character.interface';
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { PopUpComponent } from '../pop-up/pop-up.component';
+import { CharacterService } from '../../services/character.service';
 
 @Component({
   selector: 'app-table-characters',
@@ -10,6 +9,7 @@ import { PopUpComponent } from '../pop-up/pop-up.component';
 })
 export class TableCharactersComponent implements OnInit {
   characters: Character[] = [];
+
   imageStatusDead: string = '../../../assets/Icono de muerto.png';
   imageStatusLived: string = '../../../assets/Icono de vivo.png';
   imageUnknown: string = '../../../assets/unknown.svg';
@@ -19,36 +19,28 @@ export class TableCharactersComponent implements OnInit {
   allEpisodes: string[] = [];
   modalSwitch: boolean = false;
 
-  constructor(private dialogRef: MatDialog) { }
-
-    openDialog() {
-      this.dialogRef.open(PopUpComponent);
-    }
+  constructor(private characterService: CharacterService) { }
 
   ngOnInit(): void {
-    const API = 'https://rickandmortyapi.com/api/character';
-    // obtengo datos utilizando fetch
+    this.characterService.getCharacters().subscribe((data) => {
+        this.characters = data.results;
+        console.log(data);
+      });
+      // Método Fetch. Prueba App Inicial
+      // Obtención de datos utilizando fetch
+    /* const API = 'https://rickandmortyapi.com/api/character';
     fetch(API)
     .then(response => response.json()).then(data => {
       this.characters = data.results;// <-- asigno los valores a la propiedad del componente
       console.log(this.characters);
-    });
+    }); */
 
   }
   getLengthEpisodes() {
 
   }
-  getCharactersDead() {
-    this.characters.filter(character => character.status === 'Dead');
-  }
-  getCharactersLived() {
-    return this.characters.filter(character => character.status === 'Alive');
-  }
   getCharactersTotal() {
     return this.totalCharacters =  this.characters.length;
-  }
-  openModalWithId(id: number) {
-    this.modalSwitch = true;
   }
   closeModal() {
     this.modalSwitch = false;

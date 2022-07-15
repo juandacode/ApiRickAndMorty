@@ -1,3 +1,9 @@
+export interface Info {
+  count: number;
+  pages: number;
+  next: string;
+  prev: null;
+}
 export interface Character {
   id: number;
   name: string;
@@ -15,5 +21,11 @@ export interface CharacterOriginLocation {
   name: string;
   url: string;
 }
+
+export interface Data {
+  info: Info;
+  results: Character[];
+}
+
 
 
