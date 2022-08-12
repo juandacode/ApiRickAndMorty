@@ -12,7 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 5rem;
+  width: 15rem;
 }
 .navbar-icons > img:first-child {
   width: 1.4rem;
@@ -26,3 +26,16 @@
 .logo:hover {
   cursor: pointer;
 }
+.link-active {
+  color: var(--white-color);
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.link {
+  border: 1px solid #ffffff;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+

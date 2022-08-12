@@ -1,9 +1,10 @@
 <section class="navbar">
   <div class="navbar-container">
     <div class="navbar-logo">
-      <img class="logo" [src]="logoRickAndMorty" alt="">
+      <a routerLink="home"><img class="logo" [src]="logoRickAndMorty" alt=""></a>
     </div>
     <div class="navbar-icons">
+      <a routerLinkActive="link" [routerLink]="['/character']" class="link-active" href="">Personajes</a>
       <img [routerLink]="['favorites']" class="icon" [src]="iconHeart" alt="">
       <img class="icon-bell" [src]="iconBell" alt="">
       <img [routerLink]="['home']" class="icon-home" [src]="iconHome" alt="">

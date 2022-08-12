@@ -15,6 +15,7 @@ export class CharacterComponent implements OnInit {
   totalCharacters: number = 0;
   allEpisodes: string[] = [];
   modalSwitch: boolean = false;
+  iconHeart: string = "../../../assets/heart.svg";
 
   @Input() character: Character = {
     id: 0,

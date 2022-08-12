@@ -1,13 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+/* @import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination'; */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body{
-  font-size: 62.5%;
   font-family: 'Roboto', sans-serif;
-
+  font-size: 62.5%;
 }
 main {
   margin: 0.5rem 1rem;
@@ -18,6 +21,7 @@ main {
   --gray-color: #819397;
   --green-color: #BDE038;
   --red-color: #EB5757;
+  --white-color: #FFFFFF;
 }
 
 html, body { height: 100%; }

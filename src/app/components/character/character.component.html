@@ -21,6 +21,7 @@
   <td>{{ character.location.name }}</td>
   <td>{{ character.episode.length }}</td>
   <td>{{ character.created | date: 'dd/MM/yyyy' }}</td>
+  <a [routerLink]="['/character', character.id ]"><img class="icon-heart" [src]="iconHeart" alt="Icono de Corazón"></a>
   <td><!-- <img [src]="imagePaisage" alt=""> --><!-- <button (click)="openModalWithId(character.id)" type="button">Acciones</button> --> <app-pop-up [nameModal]="character.name" [imageModal]="character.image" ></app-pop-up></td>
   <!-- <div *ngIf="modalSwitch == true" class="div">
     <app-pop-up></app-pop-up>

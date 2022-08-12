@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
+import { SwiperModule } from 'swiper/angular';
 // Modulos Angular Material
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 // Routes
 import { AppRoutingModule } from './app-routing.module';
 // Components
@@ -23,6 +25,10 @@ import { SignupComponent } from './components/forms/signup/signup.component';
 import { FavoritesComponent } from './components/pages/favorites/favorites.component';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 import { HomeComponent } from './components/pages/home/home.component';
+import { FavoriteComponent } from './components/favorite/favorite.component';
+import { AuthenticationComponent } from './components/pages/authentication/authentication.component';
+import { RegisterComponent } from './components/register/register.component';
+import { CharacterDetailComponent } from './components/pages/character-detail/character-detail.component';
 
 
 @NgModule({
@@ -38,8 +44,12 @@ import { HomeComponent } from './components/pages/home/home.component';
     SignupComponent,
     FavoritesComponent,
     NotFoundComponent,
-    HomeComponent
-  ],
+    HomeComponent,
+    FavoriteComponent,
+    AuthenticationComponent,
+    RegisterComponent,
+    CharacterDetailComponent
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -48,7 +58,10 @@ import { HomeComponent } from './components/pages/home/home.component';
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule,
+    MatButtonModule,
+    SwiperModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

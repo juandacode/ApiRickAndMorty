@@ -40,7 +40,6 @@ ngOnInit(): void {
       character.status === 'Alive').length;
   });
 }
-
   onSearch() {
     this.searchCharacters.emit(this.inputSearch);
   }

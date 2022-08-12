@@ -16,3 +16,7 @@
  .new-title {
   text-align: center;
 }
+.icon-heart {
+  margin-right: 1rem;
+   cursor: pointer;
+}

@@ -7,8 +7,12 @@ import { Component, OnInit,  Input } from '@angular/core';
   styleUrls: ['./pop-up.component.css']
 })
 export class PopUpComponent implements OnInit {
+
+ 
   @Input() imageModal: string = '';
   @Input() nameModal: string = '';
+
+  @Input() characterId: string = '';
   constructor() { }
 
   ngOnInit(): void {

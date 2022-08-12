@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CharacterService } from 'src/app/services/character.service';
 
 @Component({
   selector: 'app-favorites',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavoritesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private characterService: CharacterService) { }
 
   ngOnInit(): void {
+    /* onShowFavorite(id: number) {
+      this.characterService.getCharacter(id).
+      subscribe((favorite) => {
+        console.log(favorite);
+      });
+    } */
   }
 
 }

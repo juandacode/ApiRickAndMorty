@@ -10,6 +10,8 @@ export class NavbarComponent implements OnInit {
   iconHome: string = '../../assets/Home.png';
   iconBell: string = '../../assets/Icono de campana.png';
   iconHeart: string = '../../assets/heart.svg';
+
+  
   constructor() { }
 
   ngOnInit(): void {

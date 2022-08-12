@@ -1,0 +1,18 @@
+<section>
+  <div class="card">
+      <img src="{{ bannerImage }}" alt="">
+      <img class="image" src="{{ character?.image }}" alt="">
+      <div class="info">
+        <h1>{{ character?.name }}</h1>
+        <p>{{ character?.status }}</p>
+          <p>{{ character?.location?.name }}</p>
+      </div>
+      <div class="redes">
+          <a href=""><img [src]="heartImage" alt=""></a>
+          <a href=""><img [src]="heartImage" alt=""></a>
+          <a href=""><img [src]="heartImage" alt=""></a>
+          <a href=""><img [src]="heartImage" alt=""></a>
+      </div>
+      <button id="follow">Follow</button>
+  </div>
+</section>

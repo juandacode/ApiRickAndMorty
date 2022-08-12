@@ -1,6 +1,6 @@
 .row-tables {
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: repeat(10, 1fr);
   align-items: center;
   color: var(--main-color);
   padding: 1.2rem 0;
